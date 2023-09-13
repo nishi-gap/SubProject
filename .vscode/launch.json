@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Debug C++ - Config2",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/subprj.exe", // デバッグ対象の実行ファイル
+            "args": [], // 引数を指定
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "Build C++", // ビルドタスクを指定
+            "miDebuggerPath": "C:/msys64/mingw64/bin/gdb.exe" // GDBのパスを指定
+        }
+    ],
+    "default": "Debug C++ - Config2" // デフォルトの構成を指定
+}
+

@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build C++",
+            "type": "shell",
+            "command": "g++",
+            "args": ["-g", "AAAmethod.cpp", "-std=c++20", 
+            "-I", "${workspaceFolder}/..",
+            "-I", "includes", 
+            "-I", "includes/nlopt/api", 
+            "-L", "libs",  // ライブラリファイルのディレクトリを指定
+            "-lnlopt",
+            "-lglfw3_mt",
+            "-lglfw3dll",
+            "-lglfw3",  // ライブラリ名を指定 (例: "mylib" ではなく "libmylib")
+            "-o",  
+            "subprj"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ],
+    
+}
