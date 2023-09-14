@@ -10,7 +10,12 @@
             "args": [], // 引数を指定
             "stopAtEntry": true,
             "cwd": "${workspaceFolder}",
-            "environment": [],
+            "environment": [
+                {
+                    "name": "PATH",
+                    "value": "${env:PATH};${workspaceFolder}/dlls"
+                }
+            ],
             "externalConsole": true,
             "MIMode": "gdb",
             "setupCommands": [
